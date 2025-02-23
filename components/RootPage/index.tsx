@@ -1,4 +1,6 @@
 "use client";
+import Login from "@/app/auth/login";
+import Dashboard from "@/app/dashboard/dashboard";
 import { useEffect, useState } from "react";
 
 const RootPage = () => {
@@ -13,10 +15,10 @@ const RootPage = () => {
   }, []);
 
   if (isAuthenticated) {
-    return <h5>Home</h5>;
+    return <Login/>;
   }
 
-  return <h5>Login</h5>;
+  return <Dashboard />;
 };
 
 export default RootPage;
